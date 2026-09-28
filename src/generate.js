@@ -121,6 +121,7 @@ await writeFile("assets/banner.svg", bannerSvg);
 await writeFile("assets/divider.svg", dividerSvg);
 await writeFile("generated/metrics.svg", metricsSvg);
 await writeFile("generated/project-map.svg", projectMapSvg);
+await writeFile("generated/recognition.svg", recognitionSvg);
 
 const projectRows = config.projects.map((project) => {
   const repo = repoByName.get(project.repo);
@@ -144,6 +145,34 @@ const vendorLogos = [
 const vendorLogoRow = vendorLogos.map((logo) =>
   '<img src="' + logo.src + '" alt="' + esc(logo.name) + '" height="42">'
 ).join(" &nbsp; &nbsp; &nbsp; ");
+
+const recognitionSvg = [
+  '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" width="1200" height="340">',
+  '<defs>',
+  '<linearGradient id="recBg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07030d"/><stop offset="1" stop-color="#140622"/></linearGradient>',
+  '<linearGradient id="recLine" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#ff2a6d"/><stop offset="1" stop-color="#05d9e8"/></linearGradient>',
+  '</defs>',
+  '<rect width="1200" height="340" rx="18" fill="url(#recBg)"/>',
+  '<rect x="22" y="22" width="1156" height="296" rx="14" fill="none" stroke="#2c183b"/>',
+  '<rect x="22" y="22" width="1156" height="40" rx="14" fill="#0b0612"/>',
+  '<circle cx="48" cy="42" r="5" fill="#ff2a6d"/><circle cx="66" cy="42" r="5" fill="#05d9e8"/><circle cx="84" cy="42" r="5" fill="#39ff88"/>',
+  '<text x="108" y="47" font-family="Courier New, monospace" font-size="12" fill="#718096">recognition.log // operator console</text>',
+  '<text x="54" y="96" font-family="Courier New, monospace" font-size="14" fill="#05d9e8">$ recognition --show</text>',
+  '<text x="54" y="132" font-family="Courier New, monospace" font-size="26" font-weight="700" fill="#f5f0ff">BEST EMPLOYEE OF THE MONTH</text>',
+  '<text x="54" y="157" font-family="Courier New, monospace" font-size="13" fill="#a88bc8">JULY 2025  •  SOC OPERATIONS</text>',
+  '<line x1="54" y1="184" x2="1146" y2="184" stroke="url(#recLine)" stroke-width="2"/>',
+  '<text x="54" y="216" font-family="Courier New, monospace" font-size="13" fill="#718096">WORKING STYLE</text>',
+  '<text x="54" y="246" font-family="Courier New, monospace" font-size="15" fill="#d9c8ff">NOTICE</text>',
+  '<text x="170" y="246" font-family="Courier New, monospace" font-size="15" fill="#05d9e8">→</text>',
+  '<text x="202" y="246" font-family="Courier New, monospace" font-size="15" fill="#d9c8ff">INVESTIGATE</text>',
+  '<text x="350" y="246" font-family="Courier New, monospace" font-size="15" fill="#05d9e8">→</text>',
+  '<text x="382" y="246" font-family="Courier New, monospace" font-size="15" fill="#d9c8ff">IMPROVE</text>',
+  '<text x="500" y="246" font-family="Courier New, monospace" font-size="15" fill="#05d9e8">→</text>',
+  '<text x="532" y="246" font-family="Courier New, monospace" font-size="15" fill="#39ff88">REPEAT</text>',
+  '<rect x="54" y="271" width="1092" height="1" fill="#2c183b"/>',
+  '<text x="54" y="297" font-family="Courier New, monospace" font-size="12" fill="#a88bc8">"' + esc(config.recognitionNote) + '"</text>',
+  '</svg>'
+].join("");
 
 const readme = [
   "<div align=\"center\">",
@@ -191,25 +220,9 @@ const readme = [
   "",
   "## Recognition",
   "",
-  "<div align=\"center\">",
-  "<pre>",
-  "┌──────────────────────────────────────────────────────────┐",
-  "│  SIGNAL → ANALYZE → EXPLAIN → AUTOMATE                  │",
-  "│                                                          │",
-  "│  SOC work for me is not just closing alerts.            │",
-  "│  It is finding the useful signal inside the noise and   │",
-  "│  turning that lesson into something repeatable.          │",
-  "└──────────────────────────────────────────────────────────┘",
-  "</pre>",
-  "</div>",
+  "<img src=\"generated/recognition.svg\" alt=\"Recognition and working style\" width=\"100%\">",
   "",
   config.award,
-  "",
-  config.recognitionNote,
-  "",
-  "---",
-  "",
-  "<div align=\"center\"><sub>This profile is generated from the profile configuration and public GitHub repository data. Vanity GitHub counts are intentionally omitted.</sub></div>",
   ""
 ].join("\n");
 
