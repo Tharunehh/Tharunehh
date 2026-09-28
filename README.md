@@ -3,9 +3,7 @@
 <p><a href="https://tharunshamalan.netlify.app/">Portfolio</a> • <a href="https://linkedin.com/in/tharun-shamalan">LinkedIn</a> • <a href="https://github.com/Tharunehh">GitHub</a></p>
 </div>
 
-<div align="center">
-<img src="https://skillicons.dev/icons?i=python,linux,aws,azure,docker,git,github&perline=12&size=10" alt="Core tooling">
-</div>
+<img src="generated/security-domains.svg" alt="SIEM, EDR, XDR and DLP security domains" width="100%">
 
 ## A bit about me
 
