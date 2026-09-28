@@ -56,8 +56,6 @@ export const config = {
 
   about: "I work in an MSSP environment, investigating and triaging security alerts across customer environments. My day-to-day work includes phishing analysis, IOC validation, malware investigation, SIEM administration and log-source integration. The part I enjoy most is turning noisy telemetry into a useful explanation of what happened and what should happen next.",
 
-  incident: "A ransomware investigation was one of the cases that shaped how I think about SOC work. I worked backwards through logs from multiple security controls to reconstruct the attack timeline, trace lateral movement and validate attacker techniques, then built attack-path scenarios from the evidence.",
-
   currentWork: [
     "Investigating alerts across Microsoft Sentinel, FortiSIEM and Rapid7 InsightIDR.",
     "Running malware investigations, phishing analysis and IOC validation during incident triage.",
@@ -105,12 +103,13 @@ export const config = {
     }
   ],
 
-  education: "B.Tech Computer Science Engineering (Cyber Security and IoT) • Sri Ramachandra Faculty of Engineering and Technology • 2021–2025 • CGPA 8.5/10",
+  education: "B.Tech Computer Science Engineering (Cyber Security and IoT) • Sri Ramachandra Faculty of Engineering and Technology • 2021–2025",
   certifications: [
     "FortiSIEM Certified Professional • Fortinet • 2025",
     "FortiEDR Certified Professional • Fortinet • 2025",
     "AWS cloud Practitioner Essentials • Amazon • 2023",
-    "TryHackMe Level 1"
+    "TryHackMe Level 1 • 2026"
   ],
-  award: "Best Employee of the Month • July 2025"
+  award: "Best Employee of the Month • July 2025",
+  recognitionNote: "Built for the moments after the alert: turning raw telemetry into a timeline, a hypothesis into a detection, and a detection into repeatable SOC work."
 };
