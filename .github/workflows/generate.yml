@@ -34,3 +34,5 @@ jobs:
           git add README.md generated/
           git diff --cached --quiet || git commit -m "chore: update generated profile"
           git push
+
+# Profile generator workflow
