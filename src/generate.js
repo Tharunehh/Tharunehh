@@ -198,7 +198,18 @@ PowerShell-focused security analysis and reverse-engineering work.
 
 ---
 
-## // LAB EVIDENCE\n\n<div align="center">\n\n<img src="https://github.com/user-attachments/assets/4866cfa1-1f2f-48cc-84d8-56f1efa20732" width="46%" alt="Azure Sentinel evidence">\n<img src="https://github.com/user-attachments/assets/16b2e829-2295-4d37-9bc8-05318f6537a9" width="46%" alt="Azure Sentinel threat map evidence">\n<img src="https://github.com/user-attachments/assets/7c717e25-94b5-449a-b109-4dcf156123d4" width="46%" alt="Wazuh evidence">\n<img src="https://github.com/user-attachments/assets/1faa62c0-30ea-4dcb-82c1-a0edb9fe4beb" width="46%" alt="Malware detection evidence">\n\n</div>\n\n## // CERTIFICATION
+## // LAB EVIDENCE
+
+<div align="center">
+
+<img src="https://github.com/user-attachments/assets/4866cfa1-1f2f-48cc-84d8-56f1efa20732" width="46%" alt="Azure Sentinel evidence">
+<img src="https://github.com/user-attachments/assets/16b2e829-2295-4d37-9bc8-05318f6537a9" width="46%" alt="Azure Sentinel threat map evidence">
+<img src="https://github.com/user-attachments/assets/7c717e25-94b5-449a-b109-4dcf156123d4" width="46%" alt="Wazuh evidence">
+<img src="https://github.com/user-attachments/assets/1faa62c0-30ea-4dcb-82c1-a0edb9fe4beb" width="46%" alt="Malware detection evidence">
+
+</div>
+
+## // CERTIFICATION
 
 **Microsoft Certified: Security Operations Analyst Associate**
 
@@ -208,9 +219,9 @@ Earned: **28 September 2026** · Expires: **29 September 2027**
 
 <div align="center">
 
-### `SYSTEM STATUS: ONLINE`
+### SYSTEM STATUS: ONLINE
 
-`BLUE TEAM` · `PURPLE TEAM` · `THREAT HUNTING` · `DETECTION ENGINEERING`
+BLUE TEAM · PURPLE TEAM · THREAT HUNTING · DETECTION ENGINEERING
 
 <sub>Profile generated automatically from GitHub telemetry by GitHub Actions.</sub>
 
