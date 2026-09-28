@@ -130,86 +130,39 @@ const projectRows = config.projects.map((project) => {
 }).join("\n");
 
 const stackRows = config.stack.map((item) => "<code>" + esc(item) + "</code>").join(" ");
-const focusRows = config.focus.map((item) => "- **" + esc(item) + "**").join("  \n");
-const workRows = config.currentWork.map((item) => "- " + esc(item)).join("\n");
+const focusRows = config.focus.map((item) => "- **" + esc(item) + "**").join("  \\n");
+const workRows = config.currentWork.map((item) => "- " + esc(item)).join("\\n");
 
-const vendorLogos = [
-  { name: "Fortinet", src: "assets/vendor-logos/fortinet.png" },
-  { name: "Rapid7", src: "assets/vendor-logos/rapid7.png" },
-  { name: "Sophos", src: "assets/vendor-logos/sophos1rbg.png" },
-  { name: "Seqrite", src: "assets/vendor-logos/Seqrite.jpg" }
+const securityApps = [
+  { name: "FortiSIEM", domain: "SIEM", img: "assets/vendor-logos/fortinet.png" },
+  { name: "Rapid7 InsightIDR", domain: "SIEM", img: "assets/vendor-logos/rapid7.png" },
+  { name: "Microsoft Sentinel", domain: "SIEM", img: "assets/app-icons/sentinel.svg" },
+  { name: "FortiEDR", domain: "EDR", img: "assets/vendor-logos/fortinet.png" },
+  { name: "Wazuh", domain: "EDR", img: "assets/app-icons/wazuh.svg" },
+  { name: "Sophos XDR", domain: "XDR", img: "assets/vendor-logos/sophos1rbg.png" },
+  { name: "DLP", domain: "DLP", img: "assets/app-icons/dlp.svg" },
+  { name: "MISP", domain: "Threat Intel", img: "assets/app-icons/misp.svg" }
 ];
 
-const vendorLogoRow = vendorLogos.map((logo) =>
-  '<img src="' + logo.src + '" alt="' + esc(logo.name) + '" height="46">'
-).join(" &nbsp; &nbsp; &nbsp; ");
+function securityAppCellsFor(apps) {
+  return apps.map((app) => [
+    '<td width="25%" valign="top" style="padding: 16px;">',
+    '<div align="center">',
+    '<img src="' + app.img + '" alt="' + esc(app.name) + '" width="64" height="64">',
+    '<br><br>',
+    '<strong>' + esc(app.name) + '</strong>',
+    '<br><sub>' + esc(app.domain) + '</sub>',
+    '</div>',
+    '</td>'
+  ].join("")).join("");
+}
 
-const techPalette = ["#ff2a6d", "#05d9e8", "#39ff88", "#b58cff"];
-const techCols = 4;
-const techChipW = 252;
-const techChipH = 34;
-const techGapX = 18;
-const techGapY = 14;
-const techStartX = 48;
-const techStartY = 54;
-const techRows = Math.ceil(config.stack.length / techCols);
-const techSvgHeight = techStartY + techRows * (techChipH + techGapY) + 30;
-
-const techChips = config.stack.map((item, index) => {
-  const col = index % techCols;
-  const row = Math.floor(index / techCols);
-  const x = techStartX + col * (techChipW + techGapX);
-  const y = techStartY + row * (techChipH + techGapY);
-  const accent = techPalette[index % techPalette.length];
-  const fill = index % 2 === 0 ? "#120725" : "#0d1522";
-  return [
-    '<g>',
-    '<rect x="' + x + '" y="' + y + '" width="' + techChipW + '" height="' + techChipH + '" rx="9" fill="' + fill + '" stroke="' + accent + '" stroke-opacity=".75"/>',
-    '<circle cx="' + (x + 13) + '" cy="' + (y + 17) + '" r="4" fill="' + accent + '"/>',
-    '<text x="' + (x + 25) + '" y="' + (y + 22) + '" font-family="Courier New, monospace" font-size="11.5" fill="#f5f0ff">' + esc(item) + '</text>',
-    '</g>'
-  ].join("");
-}).join("");
-
-const techStackSvg = [
-  '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1140 ' + techSvgHeight + '" width="1140" height="' + techSvgHeight + '">',
-  '<rect width="1140" height="' + techSvgHeight + '" rx="16" fill="#08030f"/>',
-  '<text x="48" y="28" font-family="Courier New, monospace" font-size="12" fill="#718096">TOOLS // DAILY STACK</text>',
-  techChips,
-  '</svg>'
-].join("");
-
-const securityDomains = [
-  { label: "SIEM", detail: "Sentinel • FortiSIEM • Rapid7", accent: "#05d9e8", icon: "◈" },
-  { label: "EDR", detail: "FortiEDR • endpoint telemetry", accent: "#ff2a6d", icon: "⌁" },
-  { label: "XDR", detail: "Sophos XDR • cross-control visibility", accent: "#39ff88", icon: "✦" },
-  { label: "DLP", detail: "Data Loss Prevention", accent: "#b58cff", icon: "◇" }
-];
-
-const securityDomainCards = securityDomains.map((item, index) => {
-  const x = 36 + index * 274;
-  return [
-    '<g>',
-    '<rect x="' + x + '" y="42" width="250" height="118" rx="14" fill="#11071f" stroke="' + item.accent + '" stroke-opacity=".82"/>',
-    '<circle cx="' + (x + 28) + '" cy="72" r="15" fill="' + item.accent + '" fill-opacity=".12" stroke="' + item.accent + '" stroke-opacity=".8"/>',
-    '<text x="' + (x + 28) + '" y="78" text-anchor="middle" font-family="Courier New, monospace" font-size="16" font-weight="700" fill="' + item.accent + '">' + item.icon + '</text>',
-    '<text x="' + (x + 56) + '" y="75" font-family="Courier New, monospace" font-size="18" font-weight="700" fill="#f5f0ff">' + item.label + '</text>',
-    '<text x="' + (x + 20) + '" y="110" font-family="Courier New, monospace" font-size="10.8" fill="#d9c8ff">' + esc(item.detail) + '</text>',
-    '<text x="' + (x + 20) + '" y="136" font-family="Courier New, monospace" font-size="9.5" fill="#718096">SECURITY CONTROL DOMAIN</text>',
-    '</g>'
-  ].join("");
-}).join("");
-
-const securityDomainsSvg = [
-  '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1140 184" width="1140" height="184">',
-  '<rect width="1140" height="184" rx="16" fill="#08030f"/>',
-  '<text x="36" y="24" font-family="Courier New, monospace" font-size="12" fill="#718096">SECURITY OPERATIONS // CONTROL DOMAINS</text>',
-  securityDomainCards,
-  '</svg>'
-].join("");
-
-await writeFile("generated/tech-stack.svg", techStackSvg);
-await writeFile("generated/security-domains.svg", securityDomainsSvg);
+const securityAppGrid = [
+  '<table>',
+  '<tr>' + securityAppCellsFor(securityApps.slice(0, 4)) + '</tr>',
+  '<tr>' + securityAppCellsFor(securityApps.slice(4, 8)) + '</tr>',
+  '</table>'
+].join("\\n");
 
 const readme = [
   "<div align=\"center\">",
@@ -217,7 +170,7 @@ const readme = [
   "<p><a href=\"" + config.portfolio + "\">Portfolio</a> • <a href=\"" + config.linkedin + "\">LinkedIn</a> • <a href=\"https://github.com/" + config.username + "\">GitHub</a></p>",
   "</div>",
   "",
-  "<img src=\"generated/security-domains.svg\" alt=\"SIEM, EDR, XDR and DLP security domains\" width=\"100%\">",
+  "## Security stack",\n  "",\n  securityAppGrid,\n  "",\n  "SIEM / EDR / XDR / DLP first. The rest of the tooling sits underneath as supporting infrastructure.",
   "",
   "## A bit about me",
   "",
