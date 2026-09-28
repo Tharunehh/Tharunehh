@@ -3,7 +3,11 @@
 <p><a href="https://tharunshamalan.netlify.app/">Portfolio</a> • <a href="https://linkedin.com/in/tharun-shamalan">LinkedIn</a> • <a href="https://github.com/Tharunehh">GitHub</a></p>
 </div>
 
-<img src="generated/security-domains.svg" alt="SIEM, EDR, XDR and DLP security domains" width="100%">
+## Security stack
+
+<table>\n<tr><td width="25%" valign="top" style="padding: 16px;"><div align="center"><img src="assets/vendor-logos/fortinet.png" alt="FortiSIEM" width="64" height="64"><br><br><strong>FortiSIEM</strong><br><sub>SIEM</sub></div></td><td width="25%" valign="top" style="padding: 16px;"><div align="center"><img src="assets/vendor-logos/rapid7.png" alt="Rapid7 InsightIDR" width="64" height="64"><br><br><strong>Rapid7 InsightIDR</strong><br><sub>SIEM</sub></div></td><td width="25%" valign="top" style="padding: 16px;"><div align="center"><img src="assets/app-icons/sentinel.svg" alt="Microsoft Sentinel" width="64" height="64"><br><br><strong>Microsoft Sentinel</strong><br><sub>SIEM</sub></div></td><td width="25%" valign="top" style="padding: 16px;"><div align="center"><img src="assets/vendor-logos/fortinet.png" alt="FortiEDR" width="64" height="64"><br><br><strong>FortiEDR</strong><br><sub>EDR</sub></div></td></tr>\n<tr><td width="25%" valign="top" style="padding: 16px;"><div align="center"><img src="assets/app-icons/wazuh.svg" alt="Wazuh" width="64" height="64"><br><br><strong>Wazuh</strong><br><sub>EDR</sub></div></td><td width="25%" valign="top" style="padding: 16px;"><div align="center"><img src="assets/vendor-logos/sophos1rbg.png" alt="Sophos XDR" width="64" height="64"><br><br><strong>Sophos XDR</strong><br><sub>XDR</sub></div></td><td width="25%" valign="top" style="padding: 16px;"><div align="center"><img src="assets/app-icons/dlp.svg" alt="DLP" width="64" height="64"><br><br><strong>DLP</strong><br><sub>DLP</sub></div></td><td width="25%" valign="top" style="padding: 16px;"><div align="center"><img src="assets/app-icons/misp.svg" alt="MISP" width="64" height="64"><br><br><strong>MISP</strong><br><sub>Threat Intel</sub></div></td></tr>\n</table>
+
+SIEM / EDR / XDR / DLP first. The rest of the tooling sits underneath as supporting infrastructure.
 
 ## A bit about me
 
@@ -15,12 +19,7 @@ The projects below are where I practise the same cycle outside the SOC: create t
 
 ## What I work on
 
-- **Security Operations**  
-- **Incident Response**  
-- **Threat Hunting**  
-- **Detection Engineering**  
-- **Malware Investigation**  
-- **Threat Intelligence**
+- **Security Operations**  \n- **Incident Response**  \n- **Threat Hunting**  \n- **Detection Engineering**  \n- **Malware Investigation**  \n- **Threat Intelligence**
 
 ### A case I remember
 
@@ -28,11 +27,7 @@ A ransomware investigation was one of the cases that shaped how I think about SO
 
 ### Day to day
 
-- Investigating alerts across Microsoft Sentinel, FortiSIEM and Rapid7 InsightIDR.
-- Running malware investigations, phishing analysis and IOC validation during incident triage.
-- Building and testing Rapid7 automation playbooks to remove repetitive SOC work.
-- Tuning SIEM correlation rules and detection use cases to reduce noise and improve alert quality.
-- Using MISP to enrich and share threat intelligence, and using GoPhish campaign results to improve security awareness.
+- Investigating alerts across Microsoft Sentinel, FortiSIEM and Rapid7 InsightIDR.\n- Running malware investigations, phishing analysis and IOC validation during incident triage.\n- Building and testing Rapid7 automation playbooks to remove repetitive SOC work.\n- Tuning SIEM correlation rules and detection use cases to reduce noise and improve alert quality.\n- Using MISP to enrich and share threat intelligence, and using GoPhish campaign results to improve security awareness.
 
 ## Projects
 
@@ -47,15 +42,11 @@ A ransomware investigation was one of the cases that shaped how I think about SO
 | [REK](https://github.com/Tharunehh/rek) | A reconnaissance automation pipeline joining discovery, permutation, DNS resolution, HTTP probing, port scanning, content discovery, JavaScript analysis and reporting. | <code>Recon</code> <code>Automation</code> <code>Python</code> <code>Web Security</code> |
 | [NudeNet](https://github.com/Tharunehh/nudenet) | An ML-powered Node.js/browser detection project with a REST API, web dashboard, batch processing and image blurring. | <code>Node.js</code> <code>TensorFlow.js</code> <code>Express</code> <code>ML</code> |
 
-## Security vendor stack
+## Supporting tooling
 
 <div align="center">
-<img src="assets/vendor-logos/fortinet.png" alt="Fortinet" height="46"> &nbsp; &nbsp; &nbsp; <img src="assets/vendor-logos/rapid7.png" alt="Rapid7" height="46"> &nbsp; &nbsp; &nbsp; <img src="assets/vendor-logos/sophos1rbg.png" alt="Sophos" height="46"> &nbsp; &nbsp; &nbsp; <img src="assets/vendor-logos/Seqrite.jpg" alt="Seqrite" height="46">
+<code>Python</code> <code>KQL</code> <code>PowerShell</code> <code>Azure</code> <code>AWS</code> <code>Power BI</code> <code>Tableau</code> <code>MITRE ATT&CK</code>
 </div>
-
-## Tech stack
-
-<img src="generated/tech-stack.svg" alt="Security and development technology stack" width="100%">
 
 ## Education
 
