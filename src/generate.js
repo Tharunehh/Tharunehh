@@ -121,7 +121,6 @@ await writeFile("assets/banner.svg", bannerSvg);
 await writeFile("assets/divider.svg", dividerSvg);
 await writeFile("generated/metrics.svg", metricsSvg);
 await writeFile("generated/project-map.svg", projectMapSvg);
-await writeFile("generated/tech-stack.svg", techStackSvg);
 
 const projectRows = config.projects.map((project) => {
   const repo = repoByName.get(project.repo);
@@ -179,6 +178,8 @@ const techStackSvg = [
   techChips,
   '</svg>'
 ].join("");
+
+await writeFile("generated/tech-stack.svg", techStackSvg);
 
 const readme = [
   "<div align=\"center\">",
