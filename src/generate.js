@@ -150,7 +150,7 @@ const readme = [
   "<p><a href=\"" + config.portfolio + "\">Portfolio</a> • <a href=\"" + config.linkedin + "\">LinkedIn</a> • <a href=\"https://github.com/" + config.username + "\">GitHub</a></p>",
   "</div>",
   "",
-  "## Security vendor stack",
+  "## Security Platforms",
   "",
   "<div align=\"center\">",
   vendorLogoRow,
