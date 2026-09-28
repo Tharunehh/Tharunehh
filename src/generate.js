@@ -125,16 +125,67 @@ await writeFile("generated/project-map.svg", projectMapSvg);
 const projectRows = config.projects.map((project) => {
   const repo = repoByName.get(project.repo);
   const href = repo?.html_url || ("https://github.com/" + config.username + "/" + project.repo);
-  const signal = repo ? (repo.language || "Security") + " · ★ " + repo.stargazers_count : project.theme;
-  return "<tr><td width=\"34%\"><h3><a href=\"" + href + "\">" + esc(project.name) + "</a></h3><sub>" + esc(project.theme) + "</sub></td><td>" + esc(project.description) + "<br><br><sub>" + esc(signal) + "</sub></td></tr>";
+  const tags = project.tags.map((tag) => "<code>" + esc(tag) + "</code>").join(" ");
+  return "| [" + project.name + "](" + href + ") | " + project.intro + " | " + tags + " |";
 }).join("\n");
 
-const stack = config.stack.map((item) => {
-  return "<img src=\"https://img.shields.io/badge/" + encodeURIComponent(item).replaceAll("%20", "-") + "-150432?style=for-the-badge&labelColor=0d0221\" alt=\"" + esc(item) + "\">";
-}).join(" ");
+const stackRows = config.stack.map((item) => "<code>" + esc(item) + "</code>").join(" ");
+const focusRows = config.focus.map((item) => "- **" + esc(item) + "**").join("  \n");
+const workRows = config.currentWork.map((item) => "- " + esc(item)).join("\n");
 
-const focus = config.focus.map((item) => "- **" + esc(item) + "**").join("  \n");
-const credentials = config.credentials.map((item) => "- **" + esc(item[0]) + "** — " + esc(item[1])).join("\n");
-const awards = config.awards.map((item) => "- **" + esc(item[0]) + "** — " + esc(item[1])).join("\n");
+const readme = [
+  "<div align=\"center\">",
+  "<img src=\"" + config.profileImage + "\" width=\"140\" alt=\"Tharun Shamalan\">",
+  "<br><br>",
+  "<img src=\"assets/banner.svg\" alt=\"Tharun Shamalan cybersecurity profile\" width=\"100%\">",
+  "<p><a href=\"" + config.portfolio + "\">Portfolio</a> • <a href=\"" + config.linkedin + "\">LinkedIn</a> • <a href=\"https://github.com/" + config.username + "\">GitHub</a></p>",
+  "</div>",
+  "",
+  "## A bit about me",
+  "",
+  config.about,
+  "",
+  "The projects below are where I practise the same cycle outside the SOC: create the activity, collect the evidence, work out what the telemetry is telling me, and turn that into something repeatable.",
+  "",
+  "<img src=\"assets/impact.svg\" alt=\"Selected security work\" width=\"100%\">",
+  "",
+  "## What I work on",
+  "",
+  focusRows,
+  "",
+  "### A case I remember",
+  "",
+  config.incident,
+  "",
+  "### Day to day",
+  "",
+  workRows,
+  "",
+  "## Projects",
+  "",
+  "<img src=\"generated/project-map.svg\" alt=\"Project DNA\" width=\"100%\">",
+  "",
+  "| Project | Why it exists | Stack / ideas |",
+  "|---|---|---|",
+  projectRows,
+  "",
+  "## Tech stack",
+  "",
+  stackRows,
+  "",
+  "## Education",
+  "",
+  config.education,
+  "",
+  "## Recognition",
+  "",
+  config.award,
+  "",
+  "---",
+  "",
+  "<div align=\"center\"><sub>This profile is generated from the profile configuration and public GitHub repository data. Vanity GitHub counts are intentionally omitted.</sub></div>",
+  ""
+].join("\n");
 
-const projectRows = config.projects.map((project) => {\n  const repo = repoByName.get(project.repo);\n  const href = repo?.html_url || ("https://github.com/" + config.username + "/" + project.repo);\n  const tags = project.tags.map((tag) => "<code>" + esc(tag) + "</code>").join(" ");\n  return "| [" + esc(project.name) + "](" + href + ") | " + esc(project.intro) + " | " + tags + " |";\n}).join("\\n");\n\nconst stackRows = config.stack.map((item) => "<code>" + esc(item) + "</code>").join(" ");\nconst focusRows = config.focus.map((item) => "- " + esc(item)).join("\\n");\nconst workRows = config.currentWork.map((item) => "- " + esc(item)).join("\\n");\n\nconst readme = [\n  "<div align=\"center\">",\n  "<img src=\"" + config.profileImage + "\" width=\"140\" alt=\"Tharun Shamalan\">",\n  "<br><br>",\n  "<img src=\"assets/banner.svg\" alt=\"Tharun Shamalan cybersecurity profile\">",\n  "<p><a href=\"" + config.portfolio + "\">Portfolio</a> • <a href=\"" + config.linkedin + "\">LinkedIn</a> • <a href=\"https://github.com/" + config.username + "\">GitHub</a></p>",\n  "</div>",\n  "",\n  "## A bit about me",\n  "",\n  esc(config.about),\n  "",\n  "The projects below are where I practise the same cycle outside the SOC: create the activity, collect the evidence, work out what the telemetry is telling me, and then turn that into something repeatable.",\n  "",\n  "<img src=\"assets/impact.svg\" alt=\"Selected security work\">",\n  "",\n  "## What I work on",\n  "",\n  focusRows,\n  "",\n  "### A case I remember",\n  "",\n  esc(config.incident),\n  "",\n  "### Day to day",\n  "",\n  workRows,\n  "",\n  "## Projects",\n  "",\n  "<img src=\"generated/project-map.svg\" alt=\"Project DNA\">",\n  "",\n  "| Project | Why it exists | Stack / ideas |",\n  "|---|---|---|",\n  projectRows,\n  "",\n  "## Tech stack",\n  "",\n  stackRows,\n  "",\n  "## Education",\n  "",\n  esc(config.education),\n  "",\n  "## Recognition",\n  "",\n  esc(config.award),\n  "",\n  "---",\n  "",\n  "<div align=\"center\"><sub>This page is generated automatically from the profile configuration and GitHub repository data. GitHub follower counts, commit totals and repository counts are intentionally not used as headline content.</sub></div>",\n  ""\n].join("\\n");\n\nawait writeFile("README.md", readme);\nconsole.log("Generated human-style profile for " + config.username + ".");\n
+await writeFile("README.md", readme);
+console.log("Generated human-style profile for " + config.username + ".");
