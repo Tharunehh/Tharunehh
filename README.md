@@ -53,29 +53,13 @@ B.Tech Computer Science Engineering (Cyber Security and IoT) • Sri Ramachandra
 
 ## Certifications
 
+- TryHackMe Level 1 • 2026
 - FortiSIEM Certified Professional • Fortinet • 2025
 - FortiEDR Certified Professional • Fortinet • 2025
 - AWS cloud Practitioner Essentials • Amazon • 2023
-- TryHackMe Level 1 • 2026
 
 ## Recognition
 
-<div align="center">
-<pre>
-┌──────────────────────────────────────────────────────────┐
-│  SIGNAL → ANALYZE → EXPLAIN → AUTOMATE                  │
-│                                                          │
-│  SOC work for me is not just closing alerts.            │
-│  It is finding the useful signal inside the noise and   │
-│  turning that lesson into something repeatable.          │
-└──────────────────────────────────────────────────────────┘
-</pre>
-</div>
+<img src="generated/recognition.svg" alt="Recognition and working style" width="100%">
 
 Best Employee of the Month • July 2025
-
-I like work that leaves the SOC quieter than it found it: less noise, clearer detections, and fewer repeated steps.
-
----
-
-<div align="center"><sub>This profile is generated from the profile configuration and public GitHub repository data. Vanity GitHub counts are intentionally omitted.</sub></div>
