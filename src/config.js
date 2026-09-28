@@ -106,5 +106,10 @@ export const config = {
   ],
 
   education: "B.Tech Computer Science Engineering (Cyber Security and IoT) • Sri Ramachandra Faculty of Engineering and Technology • 2021–2025 • CGPA 8.5/10",
+  certifications: [
+    "FortiSIEM Certified Professional • Fortinet • 2025",
+    "FortiEDR Certified Professional • Fortinet • 2025",
+    "AWS cloud Practitioner Essentials • Amazon • 2023"
+  ],
   award: "Best Employee of the Month • July 2025"
 };
