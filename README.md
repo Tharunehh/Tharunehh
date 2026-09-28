@@ -60,6 +60,7 @@ B.Tech Computer Science Engineering (Cyber Security and IoT) • Sri Ramachandra
 - FortiSIEM Certified Professional • Fortinet • 2025
 - FortiEDR Certified Professional • Fortinet • 2025
 - AWS cloud Practitioner Essentials • Amazon • 2023
+- TryHackMe Level 1
 
 ## Recognition
 
