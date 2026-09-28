@@ -111,5 +111,5 @@ export const config = {
     "TryHackMe Level 1 • 2026"
   ],
   award: "Best Employee of the Month • July 2025",
-  recognitionNote: "Built for the moments after the alert: turning raw telemetry into a timeline, a hypothesis into a detection, and a detection into repeatable SOC work."
+  recognitionNote: "I like work that leaves the SOC quieter than it found it: less noise, clearer detections, and fewer repeated steps."
 };
