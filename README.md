@@ -26,10 +26,6 @@ The projects below are where I practise the same cycle outside the SOC: create t
 - **Malware Investigation**  
 - **Threat Intelligence**
 
-### A case I remember
-
-A ransomware investigation was one of the cases that shaped how I think about SOC work. I worked backwards through logs from multiple security controls to reconstruct the attack timeline, trace lateral movement and validate attacker techniques, then built attack-path scenarios from the evidence.
-
 ### Day to day
 
 - Investigating alerts across Microsoft Sentinel, FortiSIEM and Rapid7 InsightIDR.
@@ -53,18 +49,32 @@ A ransomware investigation was one of the cases that shaped how I think about SO
 
 ## Education
 
-B.Tech Computer Science Engineering (Cyber Security and IoT) • Sri Ramachandra Faculty of Engineering and Technology • 2021–2025 • CGPA 8.5/10
+B.Tech Computer Science Engineering (Cyber Security and IoT) • Sri Ramachandra Faculty of Engineering and Technology • 2021–2025
 
 ## Certifications
 
 - FortiSIEM Certified Professional • Fortinet • 2025
 - FortiEDR Certified Professional • Fortinet • 2025
 - AWS cloud Practitioner Essentials • Amazon • 2023
-- TryHackMe Level 1
+- TryHackMe Level 1 • 2026
 
 ## Recognition
 
+<div align="center">
+<pre>
+┌──────────────────────────────────────────────────────────┐
+│  SIGNAL → ANALYZE → EXPLAIN → AUTOMATE                  │
+│                                                          │
+│  SOC work for me is not just closing alerts.            │
+│  It is finding the useful signal inside the noise and   │
+│  turning that lesson into something repeatable.          │
+└──────────────────────────────────────────────────────────┘
+</pre>
+</div>
+
 Best Employee of the Month • July 2025
+
+Built for the moments after the alert: turning raw telemetry into a timeline, a hypothesis into a detection, and a detection into repeatable SOC work.
 
 ---
 
