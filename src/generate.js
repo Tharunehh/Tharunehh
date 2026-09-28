@@ -121,7 +121,7 @@ const stackBadges = config.stack.map((item) =>
 
 const readme = `<div align="center">
 
-# ${config.name}
+<img src="${config.profileImage}" width="140" alt="Tharun profile image">\n\n# ${config.name}
 
 ### SECURITY OPERATIONS · BLUE TEAM · PURPLE TEAM
 
@@ -141,7 +141,7 @@ const readme = `<div align="center">
 
 ## // OPERATING PROFILE
 
-`SOC` `THREAT HUNTING` `DETECTION ENGINEERING` `INCIDENT RESPONSE`
+SOC • THREAT HUNTING • DETECTION ENGINEERING • INCIDENT RESPONSE
 
 > Building practical security labs, detections, telemetry pipelines and defensive tooling.
 
@@ -153,7 +153,7 @@ ${stackBadges}
 
 ---
 
-## // LIVE TELEMETRY
+## // PROJECT INTELLIGENCE\n\n<img src="./generated/ops-map.svg" alt="Project intelligence map">\n\n## // LIVE TELEMETRY
 
 <img src="./generated/stats.svg" alt="Live GitHub telemetry">
 
@@ -198,7 +198,7 @@ PowerShell-focused security analysis and reverse-engineering work.
 
 ---
 
-## // CERTIFICATION
+## // LAB EVIDENCE\n\n<div align="center">\n\n<img src="https://github.com/user-attachments/assets/4866cfa1-1f2f-48cc-84d8-56f1efa20732" width="46%" alt="Azure Sentinel evidence">\n<img src="https://github.com/user-attachments/assets/16b2e829-2295-4d37-9bc8-05318f6537a9" width="46%" alt="Azure Sentinel threat map evidence">\n<img src="https://github.com/user-attachments/assets/7c717e25-94b5-449a-b109-4dcf156123d4" width="46%" alt="Wazuh evidence">\n<img src="https://github.com/user-attachments/assets/1faa62c0-30ea-4dcb-82c1-a0edb9fe4beb" width="46%" alt="Malware detection evidence">\n\n</div>\n\n## // CERTIFICATION
 
 **Microsoft Certified: Security Operations Analyst Associate**
 
