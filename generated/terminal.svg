@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="300" viewBox="0 0 900 300">
+<rect width="900" height="300" rx="16" fill="#0d1117"/>
+<text x="32" y="55" fill="#58a6ff" font-family="monospace" font-size="22">tharun@github:~$ ./security-profile</text>
+<text x="32" y="100" fill="#c9d1d9" font-family="monospace" font-size="20">&gt; blue_team       [ACTIVE]</text>
+<text x="32" y="135" fill="#c9d1d9" font-family="monospace" font-size="20">&gt; purple_team     [ACTIVE]</text>
+<text x="32" y="170" fill="#c9d1d9" font-family="monospace" font-size="20">&gt; threat_hunting  [ACTIVE]</text>
+<text x="32" y="205" fill="#c9d1d9" font-family="monospace" font-size="20">&gt; detection_eng   [ACTIVE]</text>
+<text x="32" y="240" fill="#3fb950" font-family="monospace" font-size="20">&gt; github_sync     [OK]</text>
+</svg>
