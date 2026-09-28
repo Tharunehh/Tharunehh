@@ -3,7 +3,7 @@
 <p><a href="https://tharunshamalan.netlify.app/">Portfolio</a> • <a href="https://linkedin.com/in/tharun-shamalan">LinkedIn</a> • <a href="https://github.com/Tharunehh">GitHub</a></p>
 </div>
 
-## Security vendor stack
+## Security Platforms
 
 <div align="center">
 <img src="assets/vendor-logos/fortinet.png" alt="Fortinet" height="42"> &nbsp; &nbsp; &nbsp; <img src="assets/vendor-logos/rapid7.png" alt="Rapid7" height="42"> &nbsp; &nbsp; &nbsp; <img src="assets/vendor-logos/sophos1rbg.png" alt="Sophos" height="42"> &nbsp; &nbsp; &nbsp; <img src="assets/vendor-logos/Seqrite.jpg" alt="Seqrite" height="42">
