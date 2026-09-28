@@ -162,7 +162,7 @@ const securityAppGrid = [
   '<tr>' + securityAppCellsFor(securityApps.slice(0, 4)) + '</tr>',
   '<tr>' + securityAppCellsFor(securityApps.slice(4, 8)) + '</tr>',
   '</table>'
-].join("\\n");
+].join("\n");
 
 const readme = [
   "<div align=\"center\">",
