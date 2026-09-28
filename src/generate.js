@@ -179,7 +179,37 @@ const techStackSvg = [
   '</svg>'
 ].join("");
 
+const securityDomains = [
+  { label: "SIEM", detail: "Sentinel • FortiSIEM • Rapid7", accent: "#05d9e8", icon: "◈" },
+  { label: "EDR", detail: "FortiEDR • endpoint telemetry", accent: "#ff2a6d", icon: "⌁" },
+  { label: "XDR", detail: "Sophos XDR • cross-control visibility", accent: "#39ff88", icon: "✦" },
+  { label: "DLP", detail: "Data Loss Prevention", accent: "#b58cff", icon: "◇" }
+];
+
+const securityDomainCards = securityDomains.map((item, index) => {
+  const x = 36 + index * 274;
+  return [
+    '<g>',
+    '<rect x="' + x + '" y="42" width="250" height="118" rx="14" fill="#11071f" stroke="' + item.accent + '" stroke-opacity=".82"/>',
+    '<circle cx="' + (x + 28) + '" cy="72" r="15" fill="' + item.accent + '" fill-opacity=".12" stroke="' + item.accent + '" stroke-opacity=".8"/>',
+    '<text x="' + (x + 28) + '" y="78" text-anchor="middle" font-family="Courier New, monospace" font-size="16" font-weight="700" fill="' + item.accent + '">' + item.icon + '</text>',
+    '<text x="' + (x + 56) + '" y="75" font-family="Courier New, monospace" font-size="18" font-weight="700" fill="#f5f0ff">' + item.label + '</text>',
+    '<text x="' + (x + 20) + '" y="110" font-family="Courier New, monospace" font-size="10.8" fill="#d9c8ff">' + esc(item.detail) + '</text>',
+    '<text x="' + (x + 20) + '" y="136" font-family="Courier New, monospace" font-size="9.5" fill="#718096">SECURITY CONTROL DOMAIN</text>',
+    '</g>'
+  ].join("");
+}).join("");
+
+const securityDomainsSvg = [
+  '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1140 184" width="1140" height="184">',
+  '<rect width="1140" height="184" rx="16" fill="#08030f"/>',
+  '<text x="36" y="24" font-family="Courier New, monospace" font-size="12" fill="#718096">SECURITY OPERATIONS // CONTROL DOMAINS</text>',
+  securityDomainCards,
+  '</svg>'
+].join("");
+
 await writeFile("generated/tech-stack.svg", techStackSvg);
+await writeFile("generated/security-domains.svg", securityDomainsSvg);
 
 const readme = [
   "<div align=\"center\">",
@@ -187,9 +217,7 @@ const readme = [
   "<p><a href=\"" + config.portfolio + "\">Portfolio</a> • <a href=\"" + config.linkedin + "\">LinkedIn</a> • <a href=\"https://github.com/" + config.username + "\">GitHub</a></p>",
   "</div>",
   "",
-  "<div align=\"center\">",
-  "<img src=\"https://skillicons.dev/icons?i=python,linux,aws,azure,docker,git,github&perline=12&size=10\" alt=\"Core tooling\">",
-  "</div>",
+  "<img src=\"generated/security-domains.svg\" alt=\"SIEM, EDR, XDR and DLP security domains\" width=\"100%\">",
   "",
   "## A bit about me",
   "",
