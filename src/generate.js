@@ -121,8 +121,6 @@ await writeFile("assets/banner.svg", bannerSvg);
 await writeFile("assets/divider.svg", dividerSvg);
 await writeFile("generated/metrics.svg", metricsSvg);
 await writeFile("generated/project-map.svg", projectMapSvg);
-await writeFile("generated/recognition.svg", recognitionSvg);
-
 const projectRows = config.projects.map((project) => {
   const repo = repoByName.get(project.repo);
   const href = repo?.html_url || ("https://github.com/" + config.username + "/" + project.repo);
@@ -173,6 +171,8 @@ const recognitionSvg = [
   '<text x="54" y="297" font-family="Courier New, monospace" font-size="12" fill="#a88bc8">"' + esc(config.recognitionNote) + '"</text>',
   '</svg>'
 ].join("");
+
+await writeFile("generated/recognition.svg", recognitionSvg);
 
 const readme = [
   "<div align=\"center\">",
