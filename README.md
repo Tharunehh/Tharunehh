@@ -52,12 +52,12 @@ A ransomware investigation was one of the cases that shaped how I think about SO
 ## Security vendor stack
 
 <div align="center">
-<img src="https://raw.githubusercontent.com/Tharunehh/My-Website/main/public/vendor-logos/fortinet.png" alt="Fortinet" height="42" style="margin: 6px 12px; object-fit: contain;"><img src="https://raw.githubusercontent.com/Tharunehh/My-Website/main/public/vendor-logos/rapid7.png" alt="Rapid7" height="42" style="margin: 6px 12px; object-fit: contain;"><img src="https://raw.githubusercontent.com/Tharunehh/My-Website/main/public/vendor-logos/sophos1rbg.png" alt="Sophos" height="42" style="margin: 6px 12px; object-fit: contain;"><img src="https://raw.githubusercontent.com/Tharunehh/My-Website/main/public/vendor-logos/Seqrite.jpg" alt="Seqrite" height="42" style="margin: 6px 12px; object-fit: contain;">
+<img src="assets/vendor-logos/fortinet.png" alt="Fortinet" height="46"> &nbsp; &nbsp; &nbsp; <img src="assets/vendor-logos/rapid7.png" alt="Rapid7" height="46"> &nbsp; &nbsp; &nbsp; <img src="assets/vendor-logos/sophos1rbg.png" alt="Sophos" height="46"> &nbsp; &nbsp; &nbsp; <img src="assets/vendor-logos/Seqrite.jpg" alt="Seqrite" height="46">
 </div>
 
 ## Tech stack
 
-<code>Rapid7 InsightIDR</code> <code>FortiEDR</code> <code>Sophos XDR</code> <code>Microsoft Sentinel</code> <code>FortiSIEM</code> <code>Forti SOAR</code> <code>Trace cat</code> <code>MISP</code> <code>IOC Validation</code> <code>IOC Management</code> <code>Hunting Queries</code> <code>Malware Triage</code> <code>Power BI</code> <code>Tableau</code> <code>Dashboard Building</code> <code>Reporting Automation</code> <code>Python</code> <code>KQL</code> <code>AWS</code> <code>Azure</code> <code>Oracle OCI Logs</code> <code>MITRE ATT&amp;CK</code> <code>NIST Cybersecurity Framework (CSF)</code> <code>Cyber Kill Chain</code> <code>IOC / IOA Analysis</code>
+<img src="generated/tech-stack.svg" alt="Security and development technology stack" width="100%">
 
 ## Education
 
