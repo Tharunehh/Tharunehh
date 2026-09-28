@@ -121,6 +121,7 @@ await writeFile("assets/banner.svg", bannerSvg);
 await writeFile("assets/divider.svg", dividerSvg);
 await writeFile("generated/metrics.svg", metricsSvg);
 await writeFile("generated/project-map.svg", projectMapSvg);
+await writeFile("generated/tech-stack.svg", techStackSvg);
 
 const projectRows = config.projects.map((project) => {
   const repo = repoByName.get(project.repo);
@@ -134,15 +135,50 @@ const focusRows = config.focus.map((item) => "- **" + esc(item) + "**").join("  
 const workRows = config.currentWork.map((item) => "- " + esc(item)).join("\n");
 
 const vendorLogos = [
-  { name: "Fortinet", src: "https://raw.githubusercontent.com/Tharunehh/My-Website/main/public/vendor-logos/fortinet.png" },
-  { name: "Rapid7", src: "https://raw.githubusercontent.com/Tharunehh/My-Website/main/public/vendor-logos/rapid7.png" },
-  { name: "Sophos", src: "https://raw.githubusercontent.com/Tharunehh/My-Website/main/public/vendor-logos/sophos1rbg.png" },
-  { name: "Seqrite", src: "https://raw.githubusercontent.com/Tharunehh/My-Website/main/public/vendor-logos/Seqrite.jpg" }
+  { name: "Fortinet", src: "assets/vendor-logos/fortinet.png" },
+  { name: "Rapid7", src: "assets/vendor-logos/rapid7.png" },
+  { name: "Sophos", src: "assets/vendor-logos/sophos1rbg.png" },
+  { name: "Seqrite", src: "assets/vendor-logos/Seqrite.jpg" }
 ];
 
 const vendorLogoRow = vendorLogos.map((logo) =>
-  '<img src="' + logo.src + '" alt="' + esc(logo.name) + '" height="42" style="margin: 6px 12px; object-fit: contain;">'
-).join("");
+  '<img src="' + logo.src + '" alt="' + esc(logo.name) + '" height="46">'
+).join(" &nbsp; &nbsp; &nbsp; ");
+
+const techPalette = ["#ff2a6d", "#05d9e8", "#39ff88", "#b58cff"];
+const techCols = 4;
+const techChipW = 252;
+const techChipH = 34;
+const techGapX = 18;
+const techGapY = 14;
+const techStartX = 48;
+const techStartY = 54;
+const techRows = Math.ceil(config.stack.length / techCols);
+const techSvgHeight = techStartY + techRows * (techChipH + techGapY) + 30;
+
+const techChips = config.stack.map((item, index) => {
+  const col = index % techCols;
+  const row = Math.floor(index / techCols);
+  const x = techStartX + col * (techChipW + techGapX);
+  const y = techStartY + row * (techChipH + techGapY);
+  const accent = techPalette[index % techPalette.length];
+  const fill = index % 2 === 0 ? "#120725" : "#0d1522";
+  return [
+    '<g>',
+    '<rect x="' + x + '" y="' + y + '" width="' + techChipW + '" height="' + techChipH + '" rx="9" fill="' + fill + '" stroke="' + accent + '" stroke-opacity=".75"/>',
+    '<circle cx="' + (x + 13) + '" cy="' + (y + 17) + '" r="4" fill="' + accent + '"/>',
+    '<text x="' + (x + 25) + '" y="' + (y + 22) + '" font-family="Courier New, monospace" font-size="11.5" fill="#f5f0ff">' + esc(item) + '</text>',
+    '</g>'
+  ].join("");
+}).join("");
+
+const techStackSvg = [
+  '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1140 ' + techSvgHeight + '" width="1140" height="' + techSvgHeight + '">',
+  '<rect width="1140" height="' + techSvgHeight + '" rx="16" fill="#08030f"/>',
+  '<text x="48" y="28" font-family="Courier New, monospace" font-size="12" fill="#718096">TOOLS // DAILY STACK</text>',
+  techChips,
+  '</svg>'
+].join("");
 
 const readme = [
   "<div align=\"center\">",
@@ -190,7 +226,7 @@ const readme = [
   "",
   "## Tech stack",
   "",
-  stackRows,
+  "<img src=\"generated/tech-stack.svg\" alt=\"Security and development technology stack\" width=\"100%\">",
   "",
   "## Education",
   "",
