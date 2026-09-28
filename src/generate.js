@@ -135,10 +135,12 @@ const workRows = config.currentWork.map((item) => "- " + esc(item)).join("\n");
 
 const readme = [
   "<div align=\"center\">",
-  "<img src=\"" + config.profileImage + "\" width=\"140\" alt=\"Tharun Shamalan\">",
-  "<br><br>",
   "<img src=\"assets/banner.svg\" alt=\"Tharun Shamalan cybersecurity profile\" width=\"100%\">",
   "<p><a href=\"" + config.portfolio + "\">Portfolio</a> • <a href=\"" + config.linkedin + "\">LinkedIn</a> • <a href=\"https://github.com/" + config.username + "\">GitHub</a></p>",
+  "</div>",
+  "",
+  "<div align=\"center\">",
+  "<img src=\"https://skillicons.dev/icons?i=python,linux,aws,azure,docker,git,github&perline=12&size=10\" alt=\"Core tooling\">",
   "</div>",
   "",
   "## A bit about me",
