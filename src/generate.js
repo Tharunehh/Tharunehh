@@ -133,6 +133,17 @@ const stackRows = config.stack.map((item) => "<code>" + esc(item) + "</code>").j
 const focusRows = config.focus.map((item) => "- **" + esc(item) + "**").join("  \n");
 const workRows = config.currentWork.map((item) => "- " + esc(item)).join("\n");
 
+const vendorLogos = [
+  { name: "Fortinet", src: "https://raw.githubusercontent.com/Tharunehh/My-Website/main/public/vendor-logos/fortinet.png" },
+  { name: "Rapid7", src: "https://raw.githubusercontent.com/Tharunehh/My-Website/main/public/vendor-logos/rapid7.png" },
+  { name: "Sophos", src: "https://raw.githubusercontent.com/Tharunehh/My-Website/main/public/vendor-logos/sophos1rbg.png" },
+  { name: "Seqrite", src: "https://raw.githubusercontent.com/Tharunehh/My-Website/main/public/vendor-logos/Seqrite.jpg" }
+];
+
+const vendorLogoRow = vendorLogos.map((logo) =>
+  '<img src="' + logo.src + '" alt="' + esc(logo.name) + '" height="42" style="margin: 6px 12px; object-fit: contain;">'
+).join("");
+
 const readme = [
   "<div align=\"center\">",
   "<img src=\"assets/banner.svg\" alt=\"Tharun Shamalan cybersecurity profile\" width=\"100%\">",
@@ -170,6 +181,12 @@ const readme = [
   "| Project | Why it exists | Stack / ideas |",
   "|---|---|---|",
   projectRows,
+  "",
+  "## Security vendor stack",
+  "",
+  "<div align=\"center\">",
+  vendorLogoRow,
+  "</div>",
   "",
   "## Tech stack",
   "",
