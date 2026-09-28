@@ -130,39 +130,19 @@ const projectRows = config.projects.map((project) => {
 }).join("\n");
 
 const stackRows = config.stack.map((item) => "<code>" + esc(item) + "</code>").join(" ");
-const focusRows = config.focus.map((item) => "- **" + esc(item) + "**").join("  \\n");
-const workRows = config.currentWork.map((item) => "- " + esc(item)).join("\\n");
+const focusRows = config.focus.map((item) => "- **" + esc(item) + "**").join("  \n");
+const workRows = config.currentWork.map((item) => "- " + esc(item)).join("\n");
 
-const securityApps = [
-  { name: "FortiSIEM", domain: "SIEM", img: "assets/vendor-logos/fortinet.png" },
-  { name: "Rapid7 InsightIDR", domain: "SIEM", img: "assets/vendor-logos/rapid7.png" },
-  { name: "Microsoft Sentinel", domain: "SIEM", img: "assets/app-icons/sentinel.svg" },
-  { name: "FortiEDR", domain: "EDR", img: "assets/vendor-logos/fortinet.png" },
-  { name: "Wazuh", domain: "EDR", img: "assets/app-icons/wazuh.svg" },
-  { name: "Sophos XDR", domain: "XDR", img: "assets/vendor-logos/sophos1rbg.png" },
-  { name: "DLP", domain: "DLP", img: "assets/app-icons/dlp.svg" },
-  { name: "MISP", domain: "Threat Intel", img: "assets/app-icons/misp.svg" }
+const vendorLogos = [
+  { name: "Fortinet", src: "assets/vendor-logos/fortinet.png" },
+  { name: "Rapid7", src: "assets/vendor-logos/rapid7.png" },
+  { name: "Sophos", src: "assets/vendor-logos/sophos1rbg.png" },
+  { name: "Seqrite", src: "assets/vendor-logos/Seqrite.jpg" }
 ];
 
-function securityAppCellsFor(apps) {
-  return apps.map((app) => [
-    '<td width="25%" valign="top" style="padding: 16px;">',
-    '<div align="center">',
-    '<img src="' + app.img + '" alt="' + esc(app.name) + '" width="64" height="64">',
-    '<br><br>',
-    '<strong>' + esc(app.name) + '</strong>',
-    '<br><sub>' + esc(app.domain) + '</sub>',
-    '</div>',
-    '</td>'
-  ].join("")).join("");
-}
-
-const securityAppGrid = [
-  '<table>',
-  '<tr>' + securityAppCellsFor(securityApps.slice(0, 4)) + '</tr>',
-  '<tr>' + securityAppCellsFor(securityApps.slice(4, 8)) + '</tr>',
-  '</table>'
-].join("\n");
+const vendorLogoRow = vendorLogos.map((logo) =>
+  '<img src="' + logo.src + '" alt="' + esc(logo.name) + '" height="42">'
+).join(" &nbsp; &nbsp; &nbsp; ");
 
 const readme = [
   "<div align=\"center\">",
@@ -170,11 +150,9 @@ const readme = [
   "<p><a href=\"" + config.portfolio + "\">Portfolio</a> • <a href=\"" + config.linkedin + "\">LinkedIn</a> • <a href=\"https://github.com/" + config.username + "\">GitHub</a></p>",
   "</div>",
   "",
-  "## Security stack",
-  "",
-  securityAppGrid,
-  "",
-  "SIEM / EDR / XDR / DLP first. The rest of the tooling sits underneath as supporting infrastructure.",
+  "<div align=\"center\">",
+  "<img src=\"https://skillicons.dev/icons?i=python,linux,aws,azure,docker,git,github&perline=12&size=10\" alt=\"Core tooling\">",
+  "</div>",
   "",
   "## A bit about me",
   "",
@@ -204,10 +182,10 @@ const readme = [
   "|---|---|---|",
   projectRows,
   "",
-  "## Supporting tooling",
+  "## Security vendor stack",
   "",
   "<div align=\"center\">",
-  "<code>Python</code> <code>KQL</code> <code>PowerShell</code> <code>Azure</code> <code>AWS</code> <code>Power BI</code> <code>Tableau</code> <code>MITRE ATT&CK</code>",
+  vendorLogoRow,
   "</div>",
   "",
   "## Education",
