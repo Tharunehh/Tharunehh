@@ -3,8 +3,10 @@
 <p><a href="https://tharunshamalan.netlify.app/">Portfolio</a> • <a href="https://linkedin.com/in/tharun-shamalan">LinkedIn</a> • <a href="https://github.com/Tharunehh">GitHub</a></p>
 </div>
 
+## Security vendor stack
+
 <div align="center">
-<img src="https://skillicons.dev/icons?i=python,linux,aws,azure,docker,git,github&perline=12&size=10" alt="Core tooling">
+<img src="assets/vendor-logos/fortinet.png" alt="Fortinet" height="42"> &nbsp; &nbsp; &nbsp; <img src="assets/vendor-logos/rapid7.png" alt="Rapid7" height="42"> &nbsp; &nbsp; &nbsp; <img src="assets/vendor-logos/sophos1rbg.png" alt="Sophos" height="42"> &nbsp; &nbsp; &nbsp; <img src="assets/vendor-logos/Seqrite.jpg" alt="Seqrite" height="42">
 </div>
 
 ## A bit about me
@@ -48,12 +50,6 @@ A ransomware investigation was one of the cases that shaped how I think about SO
 | [PowerShell Loader — Vidar-style Analysis](https://github.com/Tharunehh/Powershell-loader-Vidar-Analysis) | A fake-CAPTCHA clipboard attack chain analysed from user execution and obfuscated PowerShell through payload delivery and ATT&CK mapping. | <code>PowerShell</code> <code>Malware Analysis</code> <code>ATT&amp;CK</code> <code>CyberChef</code> |
 | [REK](https://github.com/Tharunehh/rek) | A reconnaissance automation pipeline joining discovery, permutation, DNS resolution, HTTP probing, port scanning, content discovery, JavaScript analysis and reporting. | <code>Recon</code> <code>Automation</code> <code>Python</code> <code>Web Security</code> |
 | [NudeNet](https://github.com/Tharunehh/nudenet) | An ML-powered Node.js/browser detection project with a REST API, web dashboard, batch processing and image blurring. | <code>Node.js</code> <code>TensorFlow.js</code> <code>Express</code> <code>ML</code> |
-
-## Security vendor stack
-
-<div align="center">
-<img src="assets/vendor-logos/fortinet.png" alt="Fortinet" height="42"> &nbsp; &nbsp; &nbsp; <img src="assets/vendor-logos/rapid7.png" alt="Rapid7" height="42"> &nbsp; &nbsp; &nbsp; <img src="assets/vendor-logos/sophos1rbg.png" alt="Sophos" height="42"> &nbsp; &nbsp; &nbsp; <img src="assets/vendor-logos/Seqrite.jpg" alt="Seqrite" height="42">
-</div>
 
 ## Education
 
