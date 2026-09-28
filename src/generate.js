@@ -162,7 +162,7 @@ const readme = [
   "",
   "The projects below are where I practise the same cycle outside the SOC: create the activity, collect the evidence, work out what the telemetry is telling me, and turn that into something repeatable.",
   "",
-  "<img src=\"assets/impact.svg\" alt=\"Selected security work\" width=\"100%\">",
+  "<img src=\"generated/metrics.svg\" alt=\"Selected security work metrics\" width=\"100%\">",
   "",
   "## What I work on",
   "",
