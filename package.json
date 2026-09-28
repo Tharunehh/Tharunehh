@@ -1,0 +1,13 @@
+{
+  "name": "tharunehh-github-profile",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Self-generating GitHub profile for Tharun Shamalan",
+  "type": "module",
+  "scripts": {
+    "generate": "node src/generate.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
