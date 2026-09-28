@@ -130,6 +130,7 @@ const projectRows = config.projects.map((project) => {
 }).join("\n");
 
 const stackRows = config.stack.map((item) => "<code>" + esc(item) + "</code>").join(" ");
+const certificationRows = config.certifications.map((item) => "- " + esc(item)).join("\n");
 const focusRows = config.focus.map((item) => "- **" + esc(item) + "**").join("  \n");
 const workRows = config.currentWork.map((item) => "- " + esc(item)).join("\n");
 
@@ -187,6 +188,10 @@ const readme = [
   "## Education",
   "",
   config.education,
+  "",
+  "## Certifications",
+  "",
+  certificationRows,
   "",
   "## Recognition",
   "",
