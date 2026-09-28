@@ -74,7 +74,7 @@ B.Tech Computer Science Engineering (Cyber Security and IoT) • Sri Ramachandra
 
 Best Employee of the Month • July 2025
 
-Built for the moments after the alert: turning raw telemetry into a timeline, a hypothesis into a detection, and a detection into repeatable SOC work.
+I like work that leaves the SOC quieter than it found it: less noise, clearer detections, and fewer repeated steps.
 
 ---
 
