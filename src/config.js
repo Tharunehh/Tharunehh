@@ -109,7 +109,8 @@ export const config = {
   certifications: [
     "FortiSIEM Certified Professional • Fortinet • 2025",
     "FortiEDR Certified Professional • Fortinet • 2025",
-    "AWS cloud Practitioner Essentials • Amazon • 2023"
+    "AWS cloud Practitioner Essentials • Amazon • 2023",
+    "TryHackMe Level 1"
   ],
   award: "Best Employee of the Month • July 2025"
 };
